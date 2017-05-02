@@ -5,6 +5,7 @@ package com.wiatec.bplay.entities;
  */
 public class ChannelInfo {
     private int id;
+    private int channelId;
     private int sequence;
     private String tag;
     private String name;
@@ -21,6 +22,14 @@ public class ChannelInfo {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(int channelId) {
+        this.channelId = channelId;
     }
 
     public int getSequence() {
@@ -99,6 +108,7 @@ public class ChannelInfo {
     public String toString() {
         return "ChannelInfo{" +
                 "id=" + id +
+                ", channelId=" + channelId +
                 ", sequence=" + sequence +
                 ", tag='" + tag + '\'' +
                 ", name='" + name + '\'' +
