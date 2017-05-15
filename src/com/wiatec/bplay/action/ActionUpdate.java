@@ -18,6 +18,7 @@ public class ActionUpdate extends BaseAction {
 
     public void get(){
         updateInfo = updateDao.get();
+        updateInfo.setFileName(updateInfo.getPackageName()+".apk");
         out.println(JSONObject.fromObject(updateInfo));
         out.flush();
         out.close();

@@ -5,7 +5,7 @@
       <paths name="wiaec">
         <serverdata>
           <mappings>
-            <mapping deploy="/BPlay/bplay1" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/BPlay/BPlay" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

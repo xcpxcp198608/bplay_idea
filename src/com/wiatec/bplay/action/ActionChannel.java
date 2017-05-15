@@ -20,7 +20,8 @@ public class ActionChannel extends BaseAction{
     private ChannelService channelService;
     private ChannelInfo channelInfo;
     private List<ChannelInfo> channelInfoList;
-
+    private String country;
+    private String style;
 
     public void get(){
         channelInfoList = channelService.getAll();
@@ -29,6 +30,19 @@ public class ActionChannel extends BaseAction{
         out.close();
     }
 
+    public void getChannelByCountry(){
+        channelInfoList = channelService.getChannelByCountry(country);
+        out.println(JSONArray.fromObject(channelInfoList));
+        out.flush();
+        out.close();
+    }
+
+    public void getChannelByStyle(){
+        channelInfoList = channelService.getChannelByStyle(style);
+        out.println(JSONArray.fromObject(channelInfoList));
+        out.flush();
+        out.close();
+    }
 
     public ChannelInfo getChannelInfo() {
         return channelInfo;
@@ -44,5 +58,21 @@ public class ActionChannel extends BaseAction{
 
     public void setChannelInfoList(List<ChannelInfo> channelInfoList) {
         this.channelInfoList = channelInfoList;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 }

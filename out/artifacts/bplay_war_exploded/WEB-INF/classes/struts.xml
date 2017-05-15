@@ -20,4 +20,10 @@
         </action>
     </package>
 
+    <package name="update" extends="struts-default" namespace="/update">
+        <action name="*" class="com.wiatec.bplay.action.ActionUpdate" method="{1}">
+
+        </action>
+    </package>
+
 </struts>

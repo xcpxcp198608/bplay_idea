@@ -1,5 +1,7 @@
 package com.wiatec.bplay.entities;
 
+import java.util.Arrays;
+
 /**
  * Created by xuchengpeng on 20/04/2017.
  */
