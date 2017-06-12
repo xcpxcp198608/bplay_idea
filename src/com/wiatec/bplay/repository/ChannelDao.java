@@ -21,13 +21,13 @@ public class ChannelDao extends BaseDao {
 
     @Transactional (readOnly = true)
     public List<ChannelInfo> getChannelByCountry(String country){
-        sql = "select * from channel where country=? order by `name` limit 0,10000;";
+        sql = "select * from channel where country=? and visible='1' order by `name` limit 0,10000;";
         return jdbcTemplate.query(sql , channelInfoRowMapper ,country);
     }
 
     @Transactional (readOnly = true)
     public List<ChannelInfo> getChannelByStyle(String style){
-        sql = "select * from channel where style=? order by `name` limit 0,10000";
+        sql = "select * from channel where style=? and visible='1' order by `name` limit 0,10000";
         return jdbcTemplate.query(sql , channelInfoRowMapper ,style);
     }
 }
